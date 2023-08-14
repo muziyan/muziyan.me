@@ -3,12 +3,16 @@ import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
-import netlify from "@astrojs/netlify/functions";
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://muziyan.me',
+  site: 'https://jixiaoqi.com',
+  base: '/',
   integrations: [mdx(), sitemap(), react()],
   output: "server",
-  adapter: netlify()
+  adapter: vercel({
+    analytics: true,
+    includeFiles: ['./src/content/blog/**/*.md'],
+  })
 });
