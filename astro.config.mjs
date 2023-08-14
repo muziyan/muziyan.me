@@ -13,6 +13,6 @@ export default defineConfig({
   output: "server",
   adapter: vercel({
     analytics: true,
-    includeFiles: ['./src/content/blog/**/*.md'],
+    split: true
   })
 });
