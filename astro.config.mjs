@@ -11,6 +11,8 @@ export default defineConfig({
   base: '/',
   integrations: [mdx(), sitemap(), react()],
   output: "server",
+  markdown: {
+  },
   adapter: vercel({
     analytics: true,
     split: true

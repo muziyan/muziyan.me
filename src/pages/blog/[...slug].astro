@@ -24,11 +24,16 @@ const {Content} = await post.render()
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  <BaseHead title={`${SITE_TITLE}-${post.data.title}`} description={SITE_DESCRIPTION} />
+  <link rel='stylesheet' href='/markdown.css'>
+  <link rel='stylesheet' href='/markdown-light.css'>
+  <link rel='stylesheet' href='/markdown-dark.css'>
 </head>
 <body>
 <Layout>
-  <Content></Content>
+  <div class='markdown-body'>
+    <Content></Content>
+  </div>
 </Layout>
 </body>
 </html>

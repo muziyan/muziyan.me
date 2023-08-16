@@ -5,7 +5,7 @@ const Posts = ({posts}: {posts:Record<string, any>[]}) => {
   const formatDate = (post:Record<string, any>) => {
     const date = new Date(post.data.pubDate)
 
-    return `${date.getFullYear()}/${date.getMonth()}/${date.getDay()}`
+    return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
   }
 
   return (
