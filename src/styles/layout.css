@@ -79,3 +79,21 @@
   display: inline-block;
   color: var(--c-text-desc);
 }
+
+@media screen and (max-width: 1141px) {
+  .layout-main{
+    width: 768px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layout-main{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 469px){
+  .layout-main{
+    width: 95%;
+  }
+}
