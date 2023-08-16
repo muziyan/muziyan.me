@@ -10,6 +10,7 @@ const Layout = (props:PropsWithChildren) => {
         {props.children}
       </main>
       <Footer />
+      <svg id={"bg-animation"}></svg>
     </div>
   )
 }
